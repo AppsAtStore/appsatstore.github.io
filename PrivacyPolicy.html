@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – CatSay – AI Cat Translator</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #1a1a2e;
+      background: #f8f7ff;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #4527a0, #7b1fa2);
+      color: #fff;
+      padding: 52px 40px 44px;
+      text-align: center;
+    }
+    .header .app-name {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .header .subtitle {
+      font-size: 15px;
+      opacity: 0.8;
+      max-width: 560px;
+      margin: 0 auto 24px;
+    }
+    .header .meta {
+      display: inline-flex;
+      gap: 24px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 30px;
+      padding: 8px 24px;
+      font-size: 13px;
+    }
+    .header .meta span { opacity: 0.9; }
+
+    /* Layout */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 32px 64px;
+    }
+
+    /* Summary Box */
+    .summary-box {
+      background: #fff;
+      border-left: 5px solid #7b1fa2;
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 12px rgba(75,0,130,0.07);
+    }
+    .summary-box h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #4527a0;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 32px;
+    }
+    .summary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+    }
+    .summary-item .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .summary-item .text { color: #333; }
+    .summary-item .text strong { color: #1a1a2e; }
+
+    /* Sections */
+    .section {
+      background: #fff;
+      border-radius: 14px;
+      padding: 32px 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(75,0,130,0.06);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #f0eeff;
+    }
+    .section-number {
+      background: linear-gradient(135deg, #4527a0, #7b1fa2);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .section p { color: #444; margin-bottom: 14px; }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* Data Table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 14px;
+    }
+    .data-table th {
+      background: #4527a0;
+      color: #fff;
+      padding: 11px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 8px 0 0; }
+    .data-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid #f0eeff;
+      color: #444;
+      vertical-align: top;
+    }
+    .data-table tr:nth-child(even) td { background: #faf9ff; }
+    .data-table tr:last-child td { border-bottom: none; }
+
+    /* Lists */
+    ul.styled { padding-left: 0; list-style: none; margin: 12px 0; }
+    ul.styled li {
+      padding: 6px 0 6px 28px;
+      position: relative;
+      color: #444;
+      font-size: 14.5px;
+    }
+    ul.styled li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #7b1fa2;
+      font-size: 11px;
+      top: 9px;
+    }
+
+    /* Permissions */
+    .permissions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0;
+    }
+    .perm-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f0eeff;
+      border: 1px solid #d8d0ff;
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 13.5px;
+    }
+    .perm-badge .perm-icon { font-size: 18px; }
+    .perm-badge .perm-info { }
+    .perm-badge .perm-name { font-weight: 700; color: #4527a0; display: block; }
+    .perm-badge .perm-reason { color: #666; font-size: 12px; }
+
+    /* Highlight Box */
+    .highlight-box {
+      background: #f0eeff;
+      border: 1px solid #d0c4ff;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14.5px;
+      color: #333;
+    }
+    .highlight-box strong { color: #4527a0; }
+
+    /* Third Party */
+    .third-party-card {
+      background: #faf9ff;
+      border: 1px solid #e8e4ff;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+    .third-party-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #4527a0;
+      margin-bottom: 6px;
+    }
+    .third-party-card p { font-size: 14px; color: #555; margin: 0; }
+    .third-party-card a { color: #7b1fa2; text-decoration: none; font-weight: 600; }
+    .third-party-card a:hover { text-decoration: underline; }
+
+    /* Contact */
+    .contact-box {
+      background: linear-gradient(135deg, #4527a0, #7b1fa2);
+      color: #fff;
+      border-radius: 14px;
+      padding: 32px 36px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .contact-box h2 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+    .contact-box p { opacity: 0.88; margin-bottom: 20px; font-size: 15px; }
+    .contact-box a {
+      background: #fff;
+      color: #4527a0;
+      padding: 12px 32px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 15px;
+      display: inline-block;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 13px;
+      color: #888;
+    }
+    .footer a { color: #7b1fa2; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .header { padding: 36px 20px 32px; }
+      .header h1 { font-size: 26px; }
+      .container { padding: 28px 16px 48px; }
+      .section { padding: 24px 20px; }
+      .summary-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="app-name">🐱 CatSay – AI Cat Translator</div>
+  <h1>Privacy Policy</h1>
+  <div class="subtitle">We believe in full transparency about how your data is used. Please read this policy carefully.</div>
+  <div class="meta">
+    <span>📅 Effective Date: April 14, 2026</span>
+    <span>🔄 Last Updated: May 9, 2026</span>
+    <span>📱 Platform: Android</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- SUMMARY -->
+  <div class="summary-box">
+    <h2>📋 Privacy at a Glance</h2>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <span class="icon">🎤</span>
+        <span class="text"><strong>Microphone:</strong> Used only during active recording — never stored or uploaded</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">📷</span>
+        <span class="text"><strong>Camera / Photos:</strong> Used only for breed scan — images never leave your device</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">🤖</span>
+        <span class="text"><strong>AI Processing:</strong> 100% on-device — no data sent to our servers</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">📢</span>
+        <span class="text"><strong>Ads:</strong> Google AdMob serves ads and may collect device identifiers</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">👶</span>
+        <span class="text"><strong>Children:</strong> App not directed at children under 13 (or 16 in EU)</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">📧</span>
+        <span class="text"><strong>Contact:</strong> You can request data deletion at any time</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRODUCTION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>Introduction</h2>
+    </div>
+    <p>Welcome to <strong>CatSay – AI Cat Translator </strong> ("we," "our," or "us"). CatSay – AI Cat Translator & Breed Identifier is a mobile application for Android that uses artificial intelligence to help cat owners better understand their cats through two core features: <strong>Voice Translation</strong> (analysing cat sounds to interpret mood) and <strong>Breed Identification</strong> (identifying a cat's breed from a photograph).</p>
+    
+    <div class="highlight-box">
+      <strong>Important Disclaimer:</strong> The AI-powered features (voice translation and breed identification) are provided for entertainment and general informational purposes only. The results are generated using machine learning models and may not be 100% accurate. This app does not provide veterinary diagnoses, medical advice, or professional behavioral analysis. We strongly recommend consulting a qualified veterinarian for any health or behavioral concerns regarding your cat.
+    </div>
+
+    <p>This Privacy Policy explains what information we collect, how we use it, with whom we share it, and what rights you have. By downloading or using CatSay – AI Cat Translator & Breed Identifier, you agree to the practices described in this policy. If you do not agree, please uninstall the application.</p>
+    <p>This policy complies with the Google Play Store Developer Program Policies, the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable privacy laws.</p>
+  </div>
+
+  <!-- 2. INFORMATION WE COLLECT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Information We Collect</h2>
+    </div>
+    <p>CatSay – AI Cat Translator & Breed Identifier is designed with a <strong>privacy-first, on-device processing</strong> approach. Most data never leaves your device.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Purpose</th>
+          <th>Stored?</th>
+          <th>Uploaded?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Audio recordings</strong> (cat sounds)</td>
+          <td>Processed locally by AI model to detect cat mood</td>
+          <td>Temporarily in device cache; deleted immediately after analysis</td>
+          <td>❌ Never</td>
+        </tr>
+        <tr>
+          <td><strong>Photos / Camera images</strong></td>
+          <td>Processed locally by AI model to identify cat breed</td>
+          <td>Not stored by the app; only held in memory during analysis</td>
+          <td>❌ Never</td>
+        </tr>
+        <tr>
+          <td><strong>Device identifiers</strong> (Advertising ID)</td>
+          <td>Used by Google AdMob to serve relevant advertisements</td>
+          <td>Managed by Google SDK</td>
+          <td>✅ By Google AdMob only</td>
+        </tr>
+        <tr>
+          <td><strong>App usage data</strong> (crash reports, diagnostics)</td>
+          <td>App stability and performance monitoring via Google Play Services</td>
+          <td>Managed by Google Play Services</td>
+          <td>✅ By Google Play Services only</td>
+        </tr>
+        <tr>
+          <td><strong>Approximate location</strong></td>
+          <td>May be inferred by AdMob for ad targeting (country/region level only)</td>
+          <td>Not stored by us</td>
+          <td>✅ By Google AdMob only</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box">
+      <strong>Key point:</strong> We do not operate any servers that receive your audio recordings, photos, or personal information. All AI inference runs entirely on your device using TensorFlow Lite models stored within the app.
+    </div>
+  </div>
+
+  <!-- 3. PERMISSIONS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>App Permissions</h2>
+    </div>
+    <p>CatSay – AI Cat Translator & Breed Identifier requests the following device permissions. You may deny optional permissions, but this will limit certain features.</p>
+
+    <div class="permissions">
+      <div class="perm-badge">
+        <span class="perm-icon">🎤</span>
+        <div class="perm-info">
+          <span class="perm-name">RECORD_AUDIO</span>
+          <span class="perm-reason">Required — Voice Translation feature</span>
+        </div>
+      </div>
+      <div class="perm-badge">
+        <span class="perm-icon">📷</span>
+        <div class="perm-info">
+          <span class="perm-name">CAMERA</span>
+          <span class="perm-reason">Required — Breed Identification (camera capture)</span>
+        </div>
+      </div>
+      <div class="perm-badge">
+        <span class="perm-icon">🖼️</span>
+        <div class="perm-info">
+          <span class="perm-name">READ_MEDIA_VISUAL_USER_SELECTED</span>
+          <span class="perm-reason">Required — Breed Identification (gallery selection, Android 14+)</span>
+        </div>
+      </div>
+      <div class="perm-badge">
+        <span class="perm-icon">💾</span>
+        <div class="perm-info">
+          <span class="perm-name">READ_EXTERNAL_STORAGE</span>
+          <span class="perm-reason">Required — Gallery selection (Android 12 and below)</span>
+        </div>
+      </div>
+      <div class="perm-badge">
+        <span class="perm-icon">🌐</span>
+        <div class="perm-info">
+          <span class="perm-name">INTERNET</span>
+          <span class="perm-reason">Required — Loading advertisements via Google AdMob</span>
+        </div>
+      </div>
+    </div>
+
+    <p>We follow the principle of <strong>least privilege</strong> — permissions are only requested when you use the relevant feature.</p>
+  </div>
+
+  <!-- 4. HOW WE USE YOUR INFORMATION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>How We Use Your Information</h2>
+    </div>
+    <p>The information collected is used solely for the following purposes:</p>
+    <ul class="styled">
+      <li><strong>Providing app features:</strong> Audio recordings are analysed on-device to classify cat moods. Photos are analysed on-device to identify cat breeds.</li>
+      <li><strong>Displaying advertisements:</strong> Google AdMob uses device identifiers to show relevant ads. This helps keep the app free for users.</li>
+      <li><strong>App stability:</strong> Crash reports collected by Google Play Services help us identify and fix bugs.</li>
+      <li><strong>Improving user experience:</strong> We may analyse aggregated, anonymised usage patterns to improve the app.</li>
+    </ul>
+    <p>We do <strong>not</strong> use your data for profiling, selling to third parties, or any purpose beyond those listed above.</p>
+  </div>
+
+  <!-- 5. THIRD PARTY SERVICES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Third-Party Services</h2>
+    </div>
+    <p>CatSay – AI Cat Translator & Breed Identifier integrates the following third-party services. Each has its own privacy policy:</p>
+
+    <div class="third-party-card">
+      <h3>📢 Google AdMob</h3>
+      <p>Displays banner and rewarded video advertisements within the app. AdMob may collect your Advertising ID, approximate location, and device information to serve personalised or non-personalised ads. You can opt out of personalised ads in your device settings under <em>Google → Ads → Opt out of Ads Personalisation</em>.</p>
+      <p><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy →</a></p>
+    </div>
+
+    <div class="third-party-card">
+      <h3>🤖 TensorFlow Lite (Google)</h3>
+      <p>The on-device machine learning runtime used for cat mood classification and breed identification. TensorFlow Lite runs entirely on your device and does not transmit any data externally.</p>
+    </div>
+
+    <div class="third-party-card">
+      <h3>📱 Google Play Services</h3>
+      <p>Provides core Android functionality including crash reporting and app distribution services. Data collected is governed by Google's Privacy Policy.</p>
+    </div>
+
+    <div class="highlight-box">
+      We do not integrate any social media SDKs, analytics trackers, or data brokers. We do not sell your data to any third party.
+    </div>
+  </div>
+
+  <!-- 6. DATA RETENTION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Data Retention</h2>
+    </div>
+    <p>Because the app processes all audio and image data on-device and does not upload it to any server, there is no user data stored on our systems to retain or delete.</p>
+  </div>
+
+  <!-- 7. YOUR RIGHTS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Your Rights and Choices</h2>
+    </div>
+    <p>Depending on your location, you may have rights regarding your personal data. You can revoke permissions, reset your Advertising ID, or request deletion by contacting us.</p>
+    <p>For GDPR and CCPA requests, we will respond within 30 days.</p>
+  </div>
+
+  <!-- 8. CHILDREN -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>CatSay – AI Cat Translator & Breed Identifier is <strong>not directed at children under the age of 13 (or 16 where required by local law, such as in the EU under GDPR)</strong>. We do not knowingly collect personal information from children under the applicable age threshold in their region.</p>
+  </div>
+
+  <!-- 9. SECURITY -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">9</div>
+      <h2>Data Security</h2>
+    </div>
+    <p>We take reasonable precautions to protect your data. All AI processing is performed on-device, significantly reducing security risks.</p>
+  </div>
+
+  <!-- 10. INTERNATIONAL TRANSFERS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <h2>International Data Transfers</h2>
+    </div>
+    <p>The app does not transfer your personal data externally. Only Google AdMob and Google Play Services may transfer data as per their policies.</p>
+  </div>
+
+  <!-- 11. CHANGES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">11</div>
+      <h2>Changes to This Privacy Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. Continued use of the app after any changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <!-- 12. GOVERNING LAW -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">12</div>
+      <h2>Governing Law</h2>
+    </div>
+    <p>This Privacy Policy is governed by applicable privacy laws and Google Play Developer Program Policies.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-box">
+    <h2>📬 Contact Us</h2>
+    <p>If you have any questions, concerns, or data requests regarding this Privacy Policy, please get in touch. We aim to respond to all enquiries within 30 days.</p>
+    <a href="mailto:appatstore4u@gmail.com">appatstore4u@gmail.com</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>© 2026 CatSay – AI Cat Translator & Breed Identifier. All rights reserved.</p>
+  <p style="margin-top:6px;">This privacy policy was last updated on May 9, 2026.</p>
+</div>
+
+</body>
+</html>
